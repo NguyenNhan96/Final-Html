@@ -1,0 +1,18 @@
+.content-wrap-inside {
+	padding-top: 40px;
+}
+
+.product-title {
+	font-weight: bold;
+	color: #f18500;
+	font-size: 16px;
+}
+
+.content-wrap-inside .table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+	border: 1px solid #ddd!important;
+}
