@@ -1,0 +1,85 @@
+﻿
+<section class="content-header">
+    <h1>
+        Dashboard
+        <small>Control panel</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Quản lý hàng hóa</li>
+    </ol>
+</section>
+
+<section class="content">
+    <div class="row">
+        <!--<div class="content-wrap-inside">-->
+        <div class="col-md-12">
+            <p class="product-title">Loại hàng hóa</p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="row-title">
+                        <th>Mã loại</th>
+                        <th>Tên loại hàng</th>
+                        <th>Ghi chú</th>
+                        <th>Ngày tạo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in categories" class="row-content">
+                        <td class="tilte-name">{{t.Code}}</td>
+                        <td>{{t.Name | limitTo: 30 }}{{t.Name.length > 30 ? '...' : ''}}</td>
+                        <td>{{t.Description}}</td>
+                        <td>{{t.CreateDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<div class="umb-pagination pagination" ng-show="totalPages > 1" style="text-align:center">
+                <ul>
+                    <li ng-class="{disabled: currentPage <= 1}">
+                        <a ng-click="prevPage()" ng-style="{cursor: currentPage <= 1 ? 'default' : 'pointer'}">
+                            <localize key="general_previous">Previous</localize>
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-show="pages[0].val > 1">...</a>
+                    </li>
+                    <li ng-repeat="pgn in pages"
+                        ng-class="{disabled:pgn.isActive}">
+                        <a ng-click="goToPage(pgn.val)" ng-style="{cursor: pgn.isActive ? 'default' : 'pointer'}">{{pgn.val}}</a>
+                    </li>
+                    <li>
+                        <a ng-show="pages[pages.length -1].val >= 5 && currentPage + 2 < totalPages">...</a>
+                    </li>
+                    <li ng-class="{disabled: currentPage >= totalPages}">
+                        <a ng-click="nextPage()" ng-style="{cursor: currentPage >= totalPages ? 'default' : 'pointer'}">
+                            <localize key="general_next">Next</localize>
+                        </a>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+
+        <div class="col-md-12">
+            <p class="product-title">Hàng hóa</p>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr class="row-title">
+                        <th>Mã loại</th>
+                        <th>Tên loại hàng</th>
+                        <th>Ghi chú</th>
+                        <th>Ngày tạo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="t in categories" class="row-content">
+                        <td class="tilte-name">{{t.Code}}</td>
+                        <td>{{t.Name | limitTo: 30 }}{{t.Name.length > 30 ? '...' : ''}}</td>
+                        <td>{{t.Description}}</td>
+                        <td>{{t.CreateDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
