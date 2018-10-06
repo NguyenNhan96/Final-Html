@@ -1,7 +1,7 @@
-﻿routerApp.factory('appFactory', function () {
+﻿routerApp.factory('appFactory', function ($http) {
     return {
         setString: function (input) {
-            return "Hello " + input;
+            return $http.get("http://localhost:9000/uaa/api/users/admin");
         }
     }
 });

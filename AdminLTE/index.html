@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
 
@@ -32,18 +34,28 @@
     <script src="bower_components/angularjs/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.20/angular-ui-router.min.js"></script>
 
+
     <script src="scripts/app.js"></script>
     <script src="scripts/appFactory.js"></script>
-    <script src="scripts/controller/about.controller.js"></script>
-    <script src="scripts/controller/customer.controller.js"></script>
-    <script src="scripts/controller/export.controller.js"></script>
-    <script src="scripts/controller/home.controller.js"></script>
-    <script src="scripts/controller/import.controller.js"></script>
-    <script src="scripts/controller/materials.controller.js"></script>
-    <script src="scripts/controller/producer.controller.js"></script>
-    <script src="scripts/controller/product.controller.js"></script>
-    <script src="scripts/controller/producer.controller.js"></script>
-    <script src="scripts/controller/supply-house.controller.js"></script>
+    <script src="scripts/constants.js"></script>
+
+    <script src="scripts/controller/AboutController.js"></script>
+    <script src="scripts/controller/CustomerController.js"></script>
+    <script src="scripts/controller/ExportController.js"></script>
+    <script src="scripts/controller/HomeController.js"></script>
+    <script src="scripts/controller/ImportController.js"></script>
+    <script src="scripts/controller/MaterialsController.js"></script>
+    <!--product-->
+    <script src="scripts/controller/product/ProductController.js"></script>
+    <script src="scripts/controller/product/EditProductController.js"></script>
+
+    <!--user-->
+    <script src="scripts/controller/user/UserController.js"></script>
+    <script src="scripts/controller/user/EditUserController.js"></script>
+    
+    <!---->
+    <script src="scripts/controller/ProducerController.js"></script>
+    <script src="scripts/controller/SupplyHouseController.js"></script>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -51,7 +63,7 @@
 
         <div ng-include="'pages/partials/main-header.html'"></div>
         <div ng-include="'pages/partials/main-sidebar.html'"></div>
-       
+
         <div class="content-wrapper">
             <div ui-view></div>
         </div>
@@ -75,10 +87,10 @@
             </div>
         </aside>
         <!-- Add the sidebar's background. This div must be placed
-    immediately after the control sidebar -->
+        immediately after the control sidebar -->
         <div class="control-sidebar-bg"></div>
     </div>
-    
+
     <!-- jQuery 3 -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -89,6 +101,9 @@
     <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <!-- Slimscroll -->
     <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+    <!-- iCheck -->
+    <script src="../../plugins/iCheck/icheck.min.js"></script>
 
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>

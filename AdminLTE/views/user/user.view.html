@@ -1,0 +1,63 @@
+﻿
+<section class="content-header">
+    <h1>
+        Quản lý hàng hóa
+        <small>thông tin hàng hóa</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Quản lý hàng hóa</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- /.box -->
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Loại hàng hóa</h3>
+                </div>
+                <button type="button" class="btn btn-default btn-add" ng-click="" tabindex="0">Thêm <i class="fa fa-plus"></i></button>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr class="row-title">
+                                <th>Id</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th class="col-action"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="t in model" class="row-content">
+                                <td class="tilte-name">{{t.id}}</td>
+                                <td>{{t.firstName}}</td>
+                                <td>{{t.lastName}}</td>
+                                <td>{{t.email}}</td>
+                                <td class="pull-right item-action">
+                                    <button type="button" class="btn btn-default btn-circle" ng-click="add(t)" tabindex="0"> <i class="fa fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-default btn-circle" ng-click="" tabindex="0"> <i class="fa fa-remove"></i> </button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <p ng-model="model.id"></p>
+                    <p ng-model="model.login"></p>
+                    <p ng-model="model.firstName"></p>
+                    <p ng-model="model.lastName"></p>
+                    <p ng-model="model.email"></p>
+                </div>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+<!-- page script -->
+

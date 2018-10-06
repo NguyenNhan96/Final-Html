@@ -44,3 +44,36 @@
         color: #3c8cbc;
         padding-left: 4px;
     }
+
+.modal-header {
+    padding-left: 0px;
+}
+
+.product .row {
+    padding: 15px;
+}
+.product .row:first-child {
+    padding-top:0px;
+}
+
+    .product .row .form-group {
+        margin-bottom: 0px;
+    }
+
+        .product .row .form-group input, textarea {
+            width: 100%;
+            border: 1px solid rgba(181, 181, 181, 0.5);
+            background-clip: padding-box;
+            padding:5px;
+        }
+
+.product .modal-title {
+    color: #3c8cbc;
+    cursor: default;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 25px 17px 25px;
+    border-bottom: 2px solid #f39c12;
+}

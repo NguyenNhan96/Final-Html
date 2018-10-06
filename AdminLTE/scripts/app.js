@@ -1,5 +1,5 @@
 // JavaScript source code
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router', 'ui.bootstrap']);
 
 (function (app) {
     "use strict";
@@ -10,6 +10,11 @@ var routerApp = angular.module('routerApp', ['ui.router']);
             .state('home', {
                 url: '/home',
                 templateUrl: '../views/home/home.view.html'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: '../login.html',
+                controller: 'LoginController'
             })
             .state('about', {
                 url: '/about',
@@ -25,7 +30,7 @@ var routerApp = angular.module('routerApp', ['ui.router']);
                 url: '/export',
                 templateUrl: '../views/export/export.view.html',
                 controller: 'ExportController'
-            }) 
+            })
             .state('import', {
                 url: '/import',
                 templateUrl: '../views/import/import.view.html',
@@ -43,7 +48,7 @@ var routerApp = angular.module('routerApp', ['ui.router']);
             })
             .state('product', {
                 url: '/product',
-                templateUrl: '/views/product/product.view.html',
+                templateUrl: '../views/product/product.view.html',
                 controller: 'ProductController'
             })
             .state('supply-house', {
@@ -51,6 +56,12 @@ var routerApp = angular.module('routerApp', ['ui.router']);
                 templateUrl: '../views/supply-house/supply-house.view.html',
                 controller: 'SupplyHouseController'
             })
+            .state('user', {
+                url: '/user',
+                templateUrl: '../views/user/user.view.html',
+                controller: 'UserController'
+            })
 
     });
+        //.constant('Constants', Constants);
 })(routerApp);

@@ -1,5 +1,5 @@
 ﻿// JavaScript source code
-routerApp.controller('ProductController', function ($scope) {
+routerApp.controller('ProductController', function ($scope, $uibModal) {
     $scope.categories = [
         { Id: 0, Code: "C001", Name: "Loại sp 1", Description: "Mô tả cho loại sp1", CreateDate: "19/09/2018" },
         { Id: 0, Code: "C002", Name: "Loại sp 2", Description: "Mô tả cho loại sp2", CreateDate: "20/09/2018" },
@@ -9,4 +9,20 @@ routerApp.controller('ProductController', function ($scope) {
         { Id: 0, Code: "C006", Name: "Loại sp 6", Description: "Mô tả cho loại sp6", CreateDate: "19/09/2018" }
     ];
 
+    $scope.add = function (model) {
+        var uibModalInstance  = $uibModal.open({
+            templateUrl: '../views/product/edit.view.html',
+            controller: 'EditProductController',
+            resolve: {
+                item: function () {
+                    return model;
+                }
+            }
+        });
+        uibModalInstance.result.then(function (response) {
+            //products = selectedItems;
+        }, function () {
+            //$log.info('Modal dismissed at: ' + new Date());
+        });
+    }
 });

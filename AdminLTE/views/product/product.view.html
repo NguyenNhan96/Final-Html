@@ -38,7 +38,7 @@
                                 <td>{{t.Description}}</td>
                                 <td>{{t.CreateDate}}</td>
                                 <td class="pull-right item-action">
-                                    <button type="button" class="btn btn-default btn-circle" ng-click="" tabindex="0"> <i class="fa fa-pencil"></i></button>
+                                    <button type="button" class="btn btn-default btn-circle" ng-click="add(t)" tabindex="0"> <i class="fa fa-pencil"></i></button>
                                     <button type="button" class="btn btn-default btn-circle" ng-click="" tabindex="0"> <i class="fa fa-remove"></i> </button>
                                 </td>
                             </tr>
@@ -52,6 +52,7 @@
                 <div class="box-header">
                     <h3 class="box-title">Loại hàng hóa</h3>
                 </div>
+                <button type="button" class="btn btn-default btn-add" ng-click="" tabindex="0">Thêm <i class="fa fa-plus"></i></button>
                 <!-- /.box-header -->
                 <div class="box-body">
                     <table id="example1" class="table table-bordered table-striped">
